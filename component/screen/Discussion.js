@@ -14,18 +14,20 @@ import {
   LogBox,
 } from "react-native";
 
+import Recent from "../screen/Recent";
+import Trending from "../screen/Trending";
+//import Searchbar from "../shared/SearchBar";
 
-/* import Recent from "./component/screen/Recent";
-import Trending from "./component/screen/Trending"; */
-import Discussion from "./component/screen/Discussion";
 
-/* LogBox.ignoreAllLogs();  *///Ignore all log notifications
+LogBox.ignoreAllLogs(); //Ignore all log notifications
 
-const App = () => {
+const Discussion = () => { 
 
-  return (<Discussion/>
-  )
- /*  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(1);
+  const [value, setValue] = useState(2);
+  function updateSearch(value) {
+    //logic comes here
+  }
 
   const RenderElement = () => {
     //You can add N number of Views here in if-else condition
@@ -36,94 +38,82 @@ const App = () => {
       //Return the second Screen as a child to set in Parent View
       return <Trending />;
     }
-  }; */
+  };
 
-  /* return (
-    <SafeAreaView style={{ flex: 1 }}>
+  return ( //doesnt work on recent page 
+    <SafeAreaView style={{ flex: 0.38 }}> 
       <View style={styles.container}>
         <View
           style={{
-            height: "25%",
+           height: 110, 
+            margin: 19,
             backgroundColor: "#FFFFFFF",
           }}
         >
           <View style={styles.container}>
+
             <Text style={styles.comStyle}>Community Forums</Text>
-           {/*  <Image
-              resizeMode="center"
-              source={require("./assets/community.png")}
-            /> }
-          </View> */
+         
+          </View>
         
-/* 
+
         <View style={{ flexDirection: "row" }}>
-          {/*To set the FirstScreen}
+          {/*To set the FirstScreen*/}
           <TouchableOpacity
             style={styles.buttonStyle}
             onPress={() => setIndex(1)}
           >
-            <Text style={{ color: "#20c6b6" }}>Recent</Text>
-          </TouchableOpacity> */
+          <Text style={{ color: "#20c6b6" }}>Recent</Text>
+          </TouchableOpacity>
 
           {/*To set the SecondScreen*/}
-         /*  <TouchableOpacity
+          <TouchableOpacity
             style={styles.buttonStyle}
             onPress={() => setIndex(2)}
           >
             <Text style={{ color: "#20c6b6" }}>Trending</Text>
           </TouchableOpacity>
         </View>
-      </View> */
-
-      {/* Text From Parent Screen}
-        <Text style={styles.paragraphStyle}>
-          Example of view like fragment in React Native
-        </Text> */}
-
-        {/*View to hold the child screens 
-        which can be changed on the click of a button*/}
-       /*  <View style={{ backgroundColor: "#ffffff" }}>
+      </View>
+        <View style={{ backgroundColor: "#ffffff" }}>
           <RenderElement />
         </View>
       </View>
     </SafeAreaView>
-  ); */
+
+    
+  );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffffff",
-    padding: 8,
+    backgroundColor: "white",
+    padding: 2,
+ 
   },
   comStyle: {
-    margin: 24,
+    margin: 1,
     fontSize: 35,
     fontWeight: "bold",
     textAlign: "center",
-    padding: 7,
-    color: "#550a8a",
-  },
-  paragraphStyle: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: "bold",
-    textAlign: "center",
+    padding: 4,
+    color: "#38049E",
+    fontFamily: 'Inter',
   },
   buttonStyle: {
     flex: 1,
     alignItems: "center",
-    /* backgroundColor: "#808080", */
+    //backgroundColor: "#808080",
     padding: 2,
-    margin: 2,
-  },
-  topStyle: {
-    position: "absolute",
-    height: "130px",
-    width: "414px",
-    left: "0px",
-    top: "0px",
+    margin: 10,
+    borderWidth: 0.5, 
+    shadowColor: 'green', //no effect
+     /* borderBottomColor: 'black',
+     borderTopColor: 'black', */
+    borderRadius: 10,
+    //textDecorationLine: 'underline',
   },
 });
 
-export default App;
+export default Discussion;
