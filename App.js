@@ -15,79 +15,13 @@ import {
 } from "react-native";
 
 
-/* import Recent from "./component/screen/Recent";
-import Trending from "./component/screen/Trending"; */
 import Discussion from "./component/screen/Discussion";
-
-/* LogBox.ignoreAllLogs();  *///Ignore all log notifications
 
 const App = () => {
 
   return (<Discussion/>
   )
- /*  const [index, setIndex] = useState(1);
 
-  const RenderElement = () => {
-    //You can add N number of Views here in if-else condition
-    if (index === 1) {
-      //Return the FirstScreen as a child to set in Parent View
-      return <Recent />;
-    } else {
-      //Return the second Screen as a child to set in Parent View
-      return <Trending />;
-    }
-  }; */
-
-  /* return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View style={styles.container}>
-        <View
-          style={{
-            height: "25%",
-            backgroundColor: "#FFFFFFF",
-          }}
-        >
-          <View style={styles.container}>
-            <Text style={styles.comStyle}>Community Forums</Text>
-           {/*  <Image
-              resizeMode="center"
-              source={require("./assets/community.png")}
-            /> }
-          </View> */
-        
-/* 
-        <View style={{ flexDirection: "row" }}>
-          {/*To set the FirstScreen}
-          <TouchableOpacity
-            style={styles.buttonStyle}
-            onPress={() => setIndex(1)}
-          >
-            <Text style={{ color: "#20c6b6" }}>Recent</Text>
-          </TouchableOpacity> */
-
-          {/*To set the SecondScreen*/}
-         /*  <TouchableOpacity
-            style={styles.buttonStyle}
-            onPress={() => setIndex(2)}
-          >
-            <Text style={{ color: "#20c6b6" }}>Trending</Text>
-          </TouchableOpacity>
-        </View>
-      </View> */
-
-      {/* Text From Parent Screen}
-        <Text style={styles.paragraphStyle}>
-          Example of view like fragment in React Native
-        </Text> */}
-
-        {/*View to hold the child screens 
-        which can be changed on the click of a button*/}
-       /*  <View style={{ backgroundColor: "#ffffff" }}>
-          <RenderElement />
-        </View>
-      </View>
-    </SafeAreaView>
-  ); */
 };
 
 const styles = StyleSheet.create({
@@ -113,7 +47,6 @@ const styles = StyleSheet.create({
   buttonStyle: {
     flex: 1,
     alignItems: "center",
-    /* backgroundColor: "#808080", */
     padding: 2,
     margin: 2,
   },

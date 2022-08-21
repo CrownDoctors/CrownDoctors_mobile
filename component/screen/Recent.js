@@ -1,75 +1,3 @@
-/* // How to Make a View Like Android Fragment in React Native
-// https://aboutreact.com/android-fragment-view/
-
-// import React in our code
-import React, { useState, useEffect } from "react";
-
-// import all the components we are going to use
-import { Text, View, StyleSheet, Image } from "react-native";
-import Searchbar from "../shared/SearchBar";
-
-const Recent = () => {
-/*   const [value, setValue] = useState(0);
-  function updateSearch(value) {
-    //your logic for search
-    console.log(value);
-    setValue(value);
-  } 
-  const [value, setValue] = useState(0);
-  const [index, setIndex] = useState(1);
-  function updateSearch(value) {
-    //your logic for search
-    console.log(value);
-    setValue(value);
-  }
-  const RenderElement = () => {
-    //You can add N number of Views here in if-else condition
-    if (index === 1) {
-      //Go to Add discussion
-      return <Adddiscussion />;
-    }
-  };
-
-  return (
-    /*  <View style={styles.container}>
-      
-          <Text style={styles.paragraphStyle}>
-             Content Loaded from RECENT
-          </Text> 
-         
-    </View>  
-    <View style={styles.container}>
-      <Searchbar
-        value={value}
-        updateSearch={updateSearch}
-        style={{}}
-      ></Searchbar>
-      {/*   /* inputStyle={{backgroundColor: 'white'}}
-        containerStyle={{backgroundColor: 'white', borderWidth: 1, borderRadius: 5}}
-        placeholderTextColor={'#g5g5g5'}
-        placeholder={'Pritish Vaidya'} }
-    </View>
-    /*  </View> 
-  );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "white",
-    //backgroundColor: "lavender",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 14,
-    //padding: 24,
-  },
-  copyContainer: {
-    flex: 1,
-    // backgroundColor: 'red', height: '100%', width: '100%'
-  },
-});
-
-export default Recent
- */
 
 // How to Make a View Like Android Fragment in React Native
 // https://aboutreact.com/android-fragment-view/
@@ -104,12 +32,6 @@ const Recent = () => {
         updateSearch={updateSearch}
         style={{ marginTop: "8%" }}
       ></Searchbar>
-
-      {/* <View style={styles.anotherContainer}>
-        <Text style={styles.paragraphStyle}>Categories</Text>
-      </View> */}
-
-
       <View style={styles.anotherContainer}>
         <View style={styles.items}>
           <Image
@@ -129,6 +51,7 @@ const Recent = () => {
           <Text style={{ marginTop: "1.5%" }}>Upvotes</Text>
           <Image
             style={styles.itemsRight}
+            //Have to add upvote icon instead
             source={require("../../assets/btn.png")}
           />
           <Text style={{ marginRight: "2%", marginTop: "1.5%" }}>Share</Text>
@@ -231,12 +154,8 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     borderRadius: 50,
-    // padding: 0,
-    // margin: 30,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    //justifyContent: "center",
-    // alignItems: "center",
   },
   items: {
     flexDirection: 'row',
@@ -247,8 +166,6 @@ const styles = StyleSheet.create({
     marginLeft: "30%",
   },
   discContainer: {
-    // margin: "5%",
-    // padding:"4%",
     fontSize: 15,
     backgroundColor: "white",
     color: "#38049E",
